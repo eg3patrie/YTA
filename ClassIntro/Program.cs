@@ -6,38 +6,40 @@ namespace ClassIntro
     {
         static void Main(string[] args)
         {
-            string adi = "Maraz Ali";
-            int yas = 31;
+            Ehliyet vatandas1 = new Ehliyet();
+            vatandas1.adSoyad = "Ege Yurt";
+            vatandas1.yas = 16;
+            vatandas1.kimlik = "12546875326";
 
-            Kurs kurs1 = new Kurs();
-            kurs1.KursAdi = "c#";
-            kurs1.KursunEgitmeni = "Maraz Ali";
-            kurs1.İzlenmeOrani = 70;
+            Ehliyet vatandas2 = new Ehliyet();
+            vatandas2.adSoyad = "Ata Yurt";
+            vatandas2.yas = 17;
+            vatandas2.kimlik = "12546874896";
 
-            Kurs kurs2 = new Kurs();
-            kurs2.KursAdi = "javascript";
-            kurs2.KursunEgitmeni = "Ege Yurt";
-            kurs2.İzlenmeOrani = 100;
-           
-            Kurs kurs3 = new Kurs();
-            kurs3.KursAdi = "python";
-            kurs3.KursunEgitmeni = "Ata Yurt";
-            kurs3.İzlenmeOrani = 50;
+             Ehliyet vatandas3 = new Ehliyet();
+            vatandas3.adSoyad = "Bülent Yurt";
+            vatandas3.yas = 46;
+            vatandas3.kimlik = "12642875326";
 
-            
+            Ehliyet vatandas4 = new Ehliyet();
+            vatandas4.adSoyad = "Nurgül Yurt";
+            vatandas4.yas = 45;
+            vatandas4.kimlik = "98746875326";
 
-            Kurs[] kurslar = new Kurs[] {kurs1,kurs2,kurs3 };
-            foreach (var kurs in kurslar)
+            Ehliyet[] kullanici = new Ehliyet[] {vatandas1 ,vatandas2,vatandas3,vatandas4 };
+            foreach (var vatandas in kullanici)
             {
-                Console.WriteLine(kurs.KursAdi+":"+kurs.KursunEgitmeni);
+                Console.WriteLine(vatandas.adSoyad+":"+vatandas.yas);
             }
+
+
         }
     }
 
-    class Kurs
+    class Ehliyet
     {
-        public string KursAdi { get; set; }
-        public string KursunEgitmeni { get; set; }
-        public int İzlenmeOrani { get; set; }   
+        public string adSoyad { get; set; }
+        public int yas { get; set; }
+        public string kimlik { get; set; }
     }
 }
